@@ -47,9 +47,7 @@ async function main() {
     // Note that a dynamic `import` statement here is required due to
     // webpack/webpack#6615, but in theory `import { greet } from './pkg';`
     // will work here one day as well!
-    const { PixelCanvas, Canvas } = await import('../wasm/pkg')
-    // const canvas = new Canvas(300, 300)
-    // console.log('canvas >>>', canvas);
+    const { PixelCanvas } = await import('../wasm/pkg')
     const pixelCanvas = new PixelCanvas(400, 400, 16, COLORS.get('gray'))
     drawImage(pixelCanvas)
   
