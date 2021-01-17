@@ -61,7 +61,7 @@ impl PixelCanvas {
         #[derive(Serialize, Deserialize)]
         let cell_height = self.height / self.cellsQty;
         // TODO : console.log with 1 param example
-        // console::log_1(&JsValue::from_serde(&cell_width).unwrap());
+        // console::log_1(&JsValue::from_serde(&self.cellsColors).unwrap());
 
         ctx.begin_path();
         let mut color_index:usize = 0;
